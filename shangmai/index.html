@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		<title>杨婷</title>
+		<script type="text/javascript">
+		$(function(){$("#hhService").fix({float:'right',minStatue:false,skin:'green',durationTime:1000})});
+        var scrollFunc = function (e) {  
+        	var a=$(document).scrollTop();
+            if(a==0){
+            	document.getElementById("daohang").style.top="-60px";
+            }
+        e = e || window.event;  
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+//          if(e.wheelData>0){
+//          	var a=$(document).scrollTop();
+//          	alert(a);
+//          }
+            if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+                document.getElementById("daohang").style.top="0px";
+            }  
+        } else if (e.detail) {  //Firefox滑轮事件  
+            if (e.detail< 0) { //当滑轮向下滚动时  
+                document.getElementById("daohang").style.top="0px";
+            }  
+//          if (e.detail> 0) { //当滑轮向下滚动时  
+//              var a=$(document).scrollTop();
+//          	alert(a);
+//          }  
+        }  
+    }  
+    //给页面绑定滑轮滚动事件  
+    if (document.addEventListener) {//firefox  
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+    }  
+    //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+    window.onmousewheel = document.onmousewheel = scrollFunc;  
+    
+    /********************
+* 取窗口滚动条高度 
+******************/
+function getScrollTop()
+{
+    var scrollTop=0;
+    if(document.documentElement&&document.documentElement.scrollTop)
+    {
+        scrollTop=document.documentElement.scrollTop;
+    }
+    else if(document.body)
+    {
+        scrollTop=document.body.scrollTop;
+    }
+    return scrollTop;
+}
+//
+//function creatMaskLayer(effectItem,showText) { 
+//divItem = document.createElement("div"); 
+//divItem.className="maskStyle"; 
+//divItem.style.lineHeight=effectItem.offsetHeight+"px"; 
+//divItem.innerText=showText; 
+//divItem.style.width=effectItem.offsetWidth; 
+//divItem.style.height=effectItem.offsetHeight; 
+//divItem.style.top=effectItem.offsetTop; 
+//divItem.style.left=effectItem.offsetLeft; 
+//return divItem; 
+//} 
+//
+//function setMask() { 
+//var effectItem = document.getElementById("mc"); 
+//var existMaskItem = findMaskItem(effectItem); 
+//if(existMaskItem) { 
+//return; 
+//} 
+//var showText ="yt"; 
+//effectItem.appendChild(creatMaskLayer(effectItem,showText)); 
+//} 
+//
+//function removeMask() { 
+//var effectItem = document.getElementById("mc"); 
+//var maskItem = findMaskItem(effectItem); 
+//if(maskItem) { 
+//effectItem.removeChild(maskItem); 
+//} 
+//} 
+//
+//function findMaskItem(item) { 
+//var children = item.children; 
+//for(var i=0;i<children.length;i++) { 
+//if("maskStyle"==(children[i].className)) { 
+//return children[i]; 
+//} 
+//} 
+//} 
+
+    </script>  
+	</head>
+	<body>
+    <nav id="daohang" class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid">
+		    <div class="navbar-header">
+		        <button type="button" class="navbar-toggle" data-toggle="collapse"
+		                data-target="#example-navbar-collapse">
+		            <span class="sr-only">切换导航</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="#"><img src="img/logo.jpg"></a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+		        <ul class="nav navbar-nav">
+		            <li class="active"><a href="#">关于</a></li>
+		            <li class="dropdown">
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		                                         服务<span class="caret"></span>
+		                </a>
+		                <ul class="dropdown-menu">
+		                    <li><a href="#">品牌网站</a></li>
+		                    <li><a href="#">微信营销</a></li>
+		                    <li><a href="#">产品名片</a></li>
+		                    <li><a href="#">P2P平台</a></li>
+		                    <li><a href="#">阳光商城</a></li>
+		                </ul>
+		            </li>
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">案例<span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		            		<li><a href="">所有案例</a></li>
+		            		<li><a href="">企业网站</a></li>
+		            		<li><a href="">手机网站</a></li>
+		            		<li class="divider"></li>
+		            		<li><a href="">微信平台</a></li>
+		            		<li><a href="">电子商城</a></li>
+		            		<li><a href="">其他案例</a></li>
+		            	</ul>
+		            </li>
+		            <li><a href="">团队</a></li>
+		            <li><a href="">咨询</a></li>
+		            <li><a href="">招聘</a></li>
+		            <li><a href="">联系</a></li>   
+		        </ul>
+		        <ul class="nav navbar-nav navbar-right">
+		        	<li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">微博<span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		            		<li><img src="img/oa.png"></li>
+		            	</ul>
+		            </li>
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">微信<span class="caret"></span></a>
+		            	<ul class="dropdown-menu">
+		            		<li><img src="img/weixin_code.gif"></li>
+		            	</ul>
+		            </li>
+		        </ul>
+		    </div>    
+	    </div>
+	</nav>
+	<!--<div id="i-banner" class="ui-fixed" style="height: 606px;">
+		<img class="i-banner-bg" src="./商脉科技-SUNMO-成都高端品牌网站建设-成都建站-网页设计-响应式网页设计 电话：028-69604488_files/index_bg.jpg" style="position: absolute; top: 50%; left: 50%; width: 100%; height: 839.375px; margin-top: -419.6875px; margin-left: -671.5px; display: inline;">
+		<section class="i-banner-content ui-ab">
+			<h1 class="aph" style="top: 0px; opacity: 1;"><img src="img/index_bg.jpg"></h1>
+			<div class="i-banner-info">
+				<h2 class="aph" style="top: 0px; opacity: 1;">
+					
+					<span>企业信息化运营专家</span>
+				</h2>
+				<p class="aph" style="top: 0px; opacity: 1;">Enterprise information management experts</p>
+				<p class="aph" style="top: 0px; opacity: 1;">响应式网页设计 · 微信平台 · 营销方案</p>
+			</div>
+		</section>
+		<a class="page-down ui-ab aph" href="javascript:;" style="opacity: 1;"></a>
+    </div>-->
+    <!--这里是大的背景图片区域-->
+    <div id="dbg" class="container" style="padding: 0; margin: 0;">
+    	<div class="row" style="margin: 0; padding: 0;">
+    		<img id="bg" class="img-responsive col-xs-12" src="img/index_bg.jpg" style="margin: 0; padding: 0;">
+	    	<div id="biaoyu">
+	    		<img id="by-img" src="img/logo.png">
+	    		<div id="wenzi">
+	    			<h3>企业信息化运营专家</h3>
+		    		<p>ENTERPRISE INFORMATION MANAGEMENT EXPERTS</p>
+		    		<p>响应式网页设计 · 微信平台 · 营销方案</p>
+    		    </div>
+    	    </div>
+    	</div>
+    </div>
+    
+   <!-- 这里是公司介绍区域-->
+    <div id="gsjj" class="container" >
+    	<div class="row">
+    		<div class="content col-lg-5 col-md-6 col-xs-10 col-lg-offset-1">
+    			<img src="img/about_title.gif">
+    			<h3>了解商麦</h3>
+    			<p>四川商脉科技有限公司，位于成都市锦江区大型商圈内，注册资金一千万（人民币），资金实力雄厚，并拥有行业顶级的自主研发设计技术人才。
+    		              自成立以来，始终致力于为中国企业特别是成长型企业提供专业信息化服务，在川内率先开创了专属个性化定制模式，实现企业“信息化运营”。
+    			      商脉科技已成功为川内多家知名企业客户提供了全方位、多层面的信息化解决方案。                            
+    			</p>
+    			<p>
+    			      公司服务涵盖了网站品牌策划、网络品牌优化与推广、网页创意设计、官方电子商城、微信营销平台、技术方案实施等。 
+                                      我们专业、敬业，富有激情和创意，我们尊重并深入理解每一位客户的理念，并致力于运用我们的设计能力将其充分实现。
+                                       我们追求一流的用户体验，坚信优秀的产品是优雅设计与精湛技术的完美结合。
+    			</p>
+    			<a class="btn" style="border:1px solid #ccc; color:#888888; text-align: center;">MORE+</a>
+    		</div>
+    	</div>
+    	<div class="container">
+	    	<div id="team" class="row">
+	    		<div id="bt" class="col-lg-10 col-md-offset-1">
+	    			<img style="float: right;" src="img/team_title.gif">
+	    			<h3 style="clear:both; float: right">商脉团队</h3>
+	    		</div>
+	    		<div class="content col-md-10 ima col-md-offset-1 col-xs-12">
+		    		<div class="col-md-4 ima col-xs-12" style="position: relative; padding: 0; margin: 0">
+		    		    <img class="col-xs-12 img-responsive" src="img/1409902531468597.jpg">
+		    		    <div class="rw""></div>
+		    		    <span class="name">黄亮</span>
+		    		</div>
+		    		<div class="col-md-4 ima col-xs-12" style="position: relative; padding: 0; margin: 0">
+		    		    <img class="col-xs-12 img-responsive" src="img/1413422873093391.jpg">
+		    		    <div class="rw"></div>
+		    		    <span class="name">周梅</span>
+		    		</div>
+		    		<div class="col-md-4 ima col-xs-12" style="position: relative; padding: 0; margin: 0">
+		    		    <img class="col-xs-12 img-responsive" src="img/1407827295656015.jpg">
+		    		    <div class="rw"></div>
+		    		    <span class="name">吴洋</span>
+		    		</div>
+	    		</div>
+	    	</div>
+	    	<div id="jieshao" class="col-xs-10 col-xs-offset-1">
+    			<p>我们整合商业模式、艺术价值及前沿技术，坚守原创设计推动客户产品价值最大化，与客户实现双赢！</p>
+    			<p>在这个圈子混迹多年，我们依旧保持着一份小小的执着</p>
+                <p>热情创意 理智思考</p>
+                <p>在坚持创意最大化的同时，力求团队思想与目标一致，让工作的每一分钟都有效率</p>
+                <div id="jieshao-btn">+</div>
+	    	</div>
+    	</div>
+    	<div id="yinxiao" class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<a href="#" class="col-xs-12" style="position: relative; width: 100%; height: 360px;">
+						<img src="img/web.jpg" class="img-responsive" style="position: absolute; width: 100%; height: 360px;">
+						<div class="mc"></div>
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<a href="#" class="col-xs-12" style="position: relative; width: 100%; height: 360px;">
+						<img src="img/weixin.jpg" class="img-responsive" style="position: absolute; width: 100%; height: 360px;">
+						<div class="mc"></div>
+					</a>
+				</div>
+			</div>
+	    </div>
+        <div class="container" id="new">
+        	<div class="row" id="new-c">
+        		<div id="new-c-top" class="col-md-6 col-md-offset-3">
+        			<img src="img/news_title.gif">
+        	        <p>新闻资讯</p>
+        		</div>
+        		<div id="new-c-c" class="col-md-8 col-md-offset-2">
+        			<div id="new-c-l" class="col-md-6">
+        				<img src="img/A.jpg" class="img-responsive">
+        			</div>
+        			<ul id="new-c-r" class="col-md-6">
+        				<li><a><span>2016-01-16</span>&nbsp;&nbsp;鼎城集团董事长受邀参加十八届四中全会</a></li>
+        				<li><a><span>2014-10-23</span>&nbsp;&nbsp;移动互联网如何对传统行业洗牌</a></li>
+        				<li><a><span>2014-10-20</span>&nbsp;&nbsp;数据大爆炸时代，网络发展趋势</a></li>
+        				<li><a><span>2014-10-11</span>&nbsp;&nbsp;4G体验优秀，难回到3G</a></li>
+        			</ul>
+        			
+        		</div>
+        		<div id="new-c-b" class="col-xs-12">
+        			<div id="gengduo">more+</div>
+        		</div>
+        	</div>
+        </div>
+        <div id="success" class="container">
+        	<div id="sucess-c-t" class="col-md-8 col-md-offset-2">
+        		<img src="img/case_title.jpg">
+        		<p style="color: #fff; font-size: 24px; line-height: 40px;">成功案例</p>
+        	</div>
+        	<div id="success-c-c" class="col-md-10 col-md-offset-1">
+        		<div class="col-md-12" style="height: 20px;"></div>
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1408593612625484.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1408674213296794.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420597245546071.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420596907515953.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		
+        		<div class="col-md-12" style="height: 20px;"></div>
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420596365078062.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420592979937932.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420536935125979.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		
+        		<div class="ima1 col-lg-3 col-md-6 col-xs-12">
+        			<img src="img/1420536193781055.jpg" class="col-xs-12" style="position: relative; padding: 0; left: 0;">
+        			<div class="mc1"></div>
+        		    <span class="fangkuang"></span>
+        		</div>
+        		
+        		<div id="success-c-b" class="col-md-12">
+        		    <div id="success-b-more"></div>
+        	    </div>
+        	</div>
+        	
+        </div>
+        <div id="lianxi" class="container">
+        	<div class="row">
+        		<div class="col-xs-8 col-xs-offset-2">
+		        	<div id="lianxi-t">
+		        		<img src="img/contact_title.gif">
+		        	    <h3>联系我们</h3>
+		        	</div>
+		        	<div id="lianxi-c">
+		        		<p>四川商脉科技有限公司</p>
+		        		<p>地址：成都市锦江区东大街芷泉街229号东方广场C座35F</p>
+		        		<p>劳先生： 136 8808 2228</p>
+		        		<p>办公电话：028-69604488</p>
+		        	</div>
+                </div>
+        	</div>
+        </div>
+        <div id="footer" class="container">
+        	<div class="row">
+        		<div class="col-xs-8 col-xs-offset-2">
+        			<div class="col-md-6">
+        				<img src="img/foot_logo.png">
+        				<p>四川商脉科技有限公司版权所有 COPYRIGHT © 2014-2024</p>
+        				<p>SUNMO ALL RIGHTS RESERVED. 蜀ICP备14005467号</p>
+        			</div>
+        			<div class="col-md-6">
+        				<ul class="col-xs-4">
+        					<hr width="100px" size="10px" style="border:1px solid #666"/>
+        					<li>关于我们</li>
+        					<li>我们的服务</li>
+        					<li>成功案例</li>
+        				</ul>
+        				<ul class="col-xs-4">
+        					<hr width="100px" size="10px" style="border:1px solid #666"/>
+        					<li>关于我们</li>
+        					<li>我们的服务</li>
+        					<li>成功案例</li>
+        				</ul>
+        				<ul class="col-xs-4">
+        					<hr width="100px" size="10px" style="border:1px solid #666"/>
+        					<li>关于我们</li>
+        					<li>我们的服务</li>
+        					<li>成功案例</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!--<div style="width: 130px; height: 110px;  border: 4px solid #33f; position: fixed; z-index: 3000; top: 200px; right: 0;">
+        	<div id="qq-top" style="color:#fff; font-size: 18px; height: 40px; line-height: 40px; background-color: #33f; text-align: center;"><img src="img/kf.png">&nbsp;在线客服<sup style="color:#fff; font-size: 8px; padding: 0 5px; border: 1px solid #fff;">x</sup></div>
+            <div style="width: 100%; height: 60px; line-height: 60px; text-align: center; background-color: #FBFBFB; border-radius: 5px 5px 0 0;"><img src="img/qq.png"></div>
+        </div>
+        <div style="margin-top: 10px;width: 130px; height: 110px;  border: 4px solid #33f; position: fixed; z-index: 3000; top: 200px; right: 0;">
+        	<div><img src=""></div>
+        </div>-->
+        <div class="qq" style="width: 130px; height: 110px; position: fixed; z-index: 3000; display: block; top: 200px; right: 0;">
+        	<div style="width: 100%; height: 40px; position: relative; overflow: hidden;"><img src="img/keifu.png" style="position: absolute; overflow: hidden; top: -106px;"></div>
+            <div style="position: absolute; right: 0; top: 5px;">
+            	<div style="width: 20px; height: 20px; z-index: 4000; position: relative; overflow: hidden;">
+	 	           <img id="close" onclick="closeit()" src="img/keifu.png">
+	            </div>
+            </div>
+           <div style="width: 100%; height: 60px; border-left:6px solid #029BDB; border-right: 6px solid #029BDB; margin-top: -2px; line-height: 60px; text-align: center; background-color:#fbfbfb;"><img src="img/qq.png"></div>
+        </div>
+        <div class="qq" style="width: 130px; height: 110px; margin-top: 110px; position: fixed; z-index: 3000; display: block; top: 200px; right: 0;">
+        	<div style="position: relative;width: 100%; height: 100px; overflow: hidden; border-bottom: 6px solid #029bdb;"><img src="img/keifu.png" style="top:-155px; position: absolute; overflow: hidden;"></div>
+        </div>
+        <div id="tiebian" style="width: 26px; position: fixed; z-index: 3000; height: 100px; overflow: hidden; top: 200px; right: 0; display: none;">
+        	<img onclick="openit()" src="img/keifu.png" style="position: absolute; top: 0px; left: 0;">
+        </div>
+	</body>
+	
+</html>
